@@ -1,3 +1,2 @@
-*/10 * * * * date "+%Y/%m/%d %H:%M:%S" > /home/jovyan/work/sample_log.txt # これはサンプルです
-*/1 * * * * /home/jovyan/work/cron/run.sh ./sample_note.ipynb
+*/10 * * * * /home/jovyan/work/cron/run.sh ./sample_note.ipynb 2>&1
 

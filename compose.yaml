@@ -1,0 +1,9 @@
+services:
+  colabo_imitation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./work:/home/jovyan/work
+    ports:
+      - "8888:8888"

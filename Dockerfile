@@ -3,7 +3,9 @@ FROM ubuntu:22.04
 USER root
 
 RUN apt-get update && \
-    apt-get install -y sudo cron&& \
+    apt-get install -y sudo cron tzdata && \
+    ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
+    echo "Asia/Tokyo" > /etc/timezone && \
     echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # start.shを生成
